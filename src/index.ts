@@ -1,3 +1,4 @@
-import "./style.css";
+import { FileLake } from "./element";
 
-export { sum } from "./sum";
+export const define = (name = "file-lake") =>
+  customElements.define(name, FileLake);
