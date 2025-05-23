@@ -1,6 +1,6 @@
 import { on, off } from "./utils";
 // @ts-ignore
-import FileLakeStyles from "./styles.css?raw"; // Update to import attributes once supported by Vite;
+import FileLakeStyles from "./styles.css?inline"; // Update to import attributes once supported by Vite;
 
 export class FileLake extends HTMLElement {
 	static formAssociated = true;
