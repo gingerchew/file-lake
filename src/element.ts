@@ -1,11 +1,7 @@
 import { lerp, insertHTML, on, off, hash } from "./utils";
 // @ts-ignore
 import FileLakeStyles from "./styles.css?raw"; // Update to import attributes once supported by Vite;
-
-interface CommandEvent {
-	source: HTMLButtonElement;
-	command: string;
-}
+import type { CommandEvent } from "./types";
 
 export class FileLake extends HTMLElement {
 	static formAssociated = true;
@@ -19,16 +15,14 @@ export class FileLake extends HTMLElement {
 	}
 	tpl() {
 		return `<div class="wrapper">
-      <input type="file" id="${this.id}-upload" />
-      <div class="lake">
-        <ul class="file-list">
-        
-        </ul>
-        <slot name="label"></slot>
-        <label for="${this.id}-upload"></label>
-      </div>
-      <div class="mouse-tracker"></div>
-    </div>`;
+			<input type="file" id="${this.id}-upload" />
+			<div class="lake">
+				<file-list></file-list>
+				<slot name="label"></slot>
+				<label for="${this.id}-upload"></label>
+			</div>
+			<div class="mouse-tracker"></div>
+		</div>`;
 	}
 	setMouseOver({ type }: { type: "mouseover" | string }) {
 		this.toggleAttribute("mouseover", type === "mouseover");
@@ -57,6 +51,7 @@ export class FileLake extends HTMLElement {
 				this.renderFileList();
 		}
 	}
+
 	renderFileList() {
 		const fileList =
 			this.#root.querySelector<HTMLUListElement>(".file-list")!;
@@ -117,7 +112,7 @@ export class FileLake extends HTMLElement {
 		stylesheet.replaceSync(FileLakeStyles);
 		this.id = this.id || `${this.localName}-${Date.now()}`;
 		this.#root.adoptedStyleSheets.push(stylesheet);
-		this.#root.innerHTML = this.tpl();
+		// this.#root.append(this.tpl());
 		on(this, "command", this, true);
 		on(this, "input", this, true);
 		on(this, "mousemove", this, true);
