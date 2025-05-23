@@ -1,12 +1,12 @@
 {
-  "name": "vite-vanilla-ts-lib-starter",
+  "name": "file-lake",
   "private": true,
   "version": "0.0.5",
-  "module": "./dist/vite-vanilla-ts-lib-starter.js",
+  "module": "./dist/file-lake.js",
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/vite-vanilla-ts-lib-starter.js"
+      "import": "./dist/file-lake.js"
     },
     "./dist/": {
       "import": "./dist/"
