@@ -1,6 +1,6 @@
 import type { CommandEvent } from "./types";
 import { getParent } from "./utils";
-class FLFileList extends HTMLElement {
+export class FLFileList extends HTMLElement {
 	lake = getParent(this);
 	handleEvent(e: Event) {
 		const { command, source } = e as unknown as CommandEvent;
