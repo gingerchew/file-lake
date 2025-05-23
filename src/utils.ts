@@ -40,6 +40,9 @@ export const getParent = (instance: HTMLElement) => {
 	return p;
 };
 
+/**
+ * Metric system baby!
+ */
 const base = 1000,
 	KB = base,
 	MB = base * base,
