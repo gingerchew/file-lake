@@ -18,7 +18,7 @@
 	width: 100%;
 }
 
-.mouse-tracker {
+mouse-tracker {
 	background-color: rgba(0, 0, 0, 0.6);
 	border-radius: calc(infinity * 1px);
 	height: var(--size);
@@ -31,7 +31,7 @@
 }
 
 :host([mouseover]) {
-	.mouse-tracker {
+	mouse-tracker {
 		--size: 40px;
 		opacity: 1;
 	}
