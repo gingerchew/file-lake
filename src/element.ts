@@ -38,7 +38,7 @@ export class FileLake extends HTMLElement {
 		stylesheet.replaceSync(FileLakeStyles);
 		this.id = this.id || `${this.localName}-${Date.now()}`;
 		this.#root.adoptedStyleSheets.push(stylesheet);
-		// this.#root.append(this.tpl());
+		this.#root.innerHTML = this.tpl();
 		on(this, "command", this, true);
 		on(this, "input", this, true);
 		on(this.#root.querySelector('[type="file"]')!, "change", this, false);
