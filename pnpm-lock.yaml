@@ -13,6 +13,9 @@ importers:
             "@types/node":
                 specifier: ^22.13.5
                 version: 22.15.21
+            "@types/vhtml":
+                specifier: ^2.2.9
+                version: 2.2.9
             "@vitest/coverage-v8":
                 specifier: ^3.0.7
                 version: 3.1.4(vitest@3.1.4(@types/node@22.15.21)(jiti@2.4.2)(yaml@2.8.0))
@@ -31,6 +34,9 @@ importers:
             eslint-plugin-prettier:
                 specifier: ^5.2.3
                 version: 5.4.0(eslint-config-prettier@10.1.5(eslint@9.27.0(jiti@2.4.2)))(eslint@9.27.0(jiti@2.4.2))(prettier@3.5.3)
+            htm:
+                specifier: ^3.1.1
+                version: 3.1.1
             husky:
                 specifier: ^9.1.7
                 version: 9.1.7
@@ -76,6 +82,9 @@ importers:
             typescript-eslint:
                 specifier: ^8.25.0
                 version: 8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
+            vhtml:
+                specifier: ^2.2.0
+                version: 2.2.0
             vite:
                 specifier: ^6.2.0
                 version: 6.3.5(@types/node@22.15.21)(jiti@2.4.2)(yaml@2.8.0)
@@ -832,6 +841,12 @@ packages:
         resolution:
             {
                 integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==,
+            }
+
+    "@types/vhtml@2.2.9":
+        resolution:
+            {
+                integrity: sha512-maEIRJb+PdK2FWDORl0a0aNUSGlniMl8pN+7WbanLzx1Gry4gLfsT0C9O/6JucPPBHCNrqDSImr2QcsUENLKUg==,
             }
 
     "@typescript-eslint/eslint-plugin@8.32.1":
@@ -1769,6 +1784,12 @@ packages:
         resolution:
             {
                 integrity: sha512-2yEEGqphImtKIe1NXWEhu6yD3hlFR4Mxk4Mtp3XEyScpSt4pQ4ymmXA1zzxZpj99QkFK+nN0nzjeb2+RUi/6CQ==,
+            }
+
+    htm@3.1.1:
+        resolution:
+            {
+                integrity: sha512-983Vyg8NwUE7JkZ6NmOqpCZ+sh1bKv2iYTlUkzlWmA5JD2acKoxd4KVxbMmxX/85mtfdnDmTFoNKcg5DGAvxNQ==,
             }
 
     html-escaper@2.0.2:
@@ -3024,6 +3045,12 @@ packages:
                 integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==,
             }
 
+    vhtml@2.2.0:
+        resolution:
+            {
+                integrity: sha512-TPXrXrxBOslRUVnlVkiAqhoXneiertIg86bdvzionrUYhEuiROvyPZNiiP6GIIJ2Q7oPNVyEtIx8gMAZZE9lCQ==,
+            }
+
     vite-node@3.1.4:
         resolution:
             {
@@ -3567,6 +3594,8 @@ snapshots:
             undici-types: 6.21.0
 
     "@types/tough-cookie@4.0.5": {}
+
+    "@types/vhtml@2.2.9": {}
 
     "@typescript-eslint/eslint-plugin@8.32.1(@typescript-eslint/parser@8.32.1(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)":
         dependencies:
@@ -4184,6 +4213,8 @@ snapshots:
     has-flag@4.0.0: {}
 
     hookified@1.9.0: {}
+
+    htm@3.1.1: {}
 
     html-escaper@2.0.2: {}
 
@@ -4884,6 +4915,8 @@ snapshots:
     util-deprecate@1.0.2: {}
 
     v8-compile-cache-lib@3.0.1: {}
+
+    vhtml@2.2.0: {}
 
     vite-node@3.1.4(@types/node@22.15.21)(jiti@2.4.2)(yaml@2.8.0):
         dependencies:
