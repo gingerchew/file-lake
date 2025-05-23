@@ -31,3 +31,11 @@ export const hash = (n = "" + Date.now()) => {
 	}
 	return "" + hash;
 };
+
+export const getParent = (instance: HTMLElement) => {
+	let p = instance.parentNode!;
+	while (p instanceof ShadowRoot === false) {
+		p = p?.parentNode!;
+	}
+	return p;
+};
