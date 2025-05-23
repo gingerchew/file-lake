@@ -6,6 +6,7 @@
 }
 
 :host {
+	cursor: pointer;
 	display: block;
 	min-height: 150px;
 	min-width: 100%;
@@ -44,7 +45,7 @@ mouse-tracker {
 	z-index: 1001;
 }
 
-.file-list {
+file-list {
 	background-color: hsl(219, 79%, 66%);
 	display: block;
 	height: 100%;
