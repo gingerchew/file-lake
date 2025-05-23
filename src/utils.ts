@@ -39,3 +39,23 @@ export const getParent = (instance: HTMLElement) => {
 	}
 	return p;
 };
+
+const base = 1000,
+	KB = base,
+	MB = base * base,
+	GB = base * base * base;
+
+export const getPrettySize = (size: number) => {
+	const bytes = Math.round(Math.abs(size));
+
+	if (bytes < KB) {
+		return `${bytes} bytes`;
+	}
+	if (bytes < MB) {
+		return `${Math.floor(bytes / KB)} KB`;
+	}
+	if (bytes < GB) {
+		return `${Math.floor(bytes / MB)} MB`;
+	}
+	return `${Math.floor(bytes / GB)} GB`;
+};

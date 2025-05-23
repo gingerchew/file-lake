@@ -1,12 +1,14 @@
 import type { CommandEvent } from "./types";
-import { getParent, hash } from "./utils";
+import { getParent, getPrettySize, hash } from "./utils";
+
 const listItem = (
-	{ name }: File,
+	{ name, size }: File,
 	{ id }: FLFileList
 ) => `<li style="view-transition-name: file-lake-${hash(name)}">
-    ${name}
+    ${name} <span class="file-size">${getPrettySize(size)}</span>
     <button type="button" command="--remove" commandfor="${id}">&times;</button>
 </li>`;
+
 export class FLFileList extends HTMLElement {
 	lake = getParent(this);
 	fileInput = this.lake.querySelector<HTMLInputElement>('[type="file"]');
