@@ -32,6 +32,7 @@ export default defineConfig({
       formats,
       fileName: format => fileName[format],
     },
+    target: "ES2022",
   },
   test: {
     watch: false,
